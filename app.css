@@ -1,0 +1,144 @@
+:root{
+    --bg-body: #dff9fb;
+    --bg-nav: #220455;
+    --color-nav: #644c89;
+    --color-nav-hover: #dff9fb;
+    --color-nav-active: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-body);
+}
+
+.menus{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-nav);
+    border-radius: 0px 0px 20px 20px;
+    padding: 30px 15px 15px;
+    box-shadow: 0px 8px 10px rgb(26,26,26,0,19);
+}
+
+.menus li{
+    list-style: none;
+}
+
+
+.menus li a{
+    width: 75px;
+    height: 54px;
+    color: var(--color-nav);
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    transition: 1s;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+.menus li a i{
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    top: 23%;
+    left: 0px;
+    transition-delay: .3s;
+    z-index: 9;
+    transition: 1s cubic-bezier(.49,-.35,.77,1.44);
+}
+
+
+.menus li a span{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: -16px;
+    transition-delay: .3s;
+    transition: 1s cubic-bezier(.49,-.35,.77,1.44);
+    z-index: 9;
+    opacity: 0;
+    color: #fff;
+
+}
+
+
+.slider{
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -35%;
+    background-color:salmon;
+    box-shadow: 0px 0px 0px 5px #fff;
+    transition: 1s cubic-bezier(.49,-.35,.77,1.44);
+    border-radius: 50%;
+    z-index: 9;
+}
+
+
+.menus li a.active-icon i{
+    top: -90%;
+    transition-delay: .3s;
+    transition: 1s cubic-bezier(.49,-.35,.77,1.44);
+}
+
+.menus li a.active-icon span{
+    bottom: 14px;
+    transition-delay: .5s;
+    transition: 1s;
+    opacity: 1;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  
+    .mobile-navbar {
+        width: 100% !important;
+        position: fixed !important;
+      }
+
+
+      .menus {
+        border-radius: 18px 18px 0px 0px;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+      }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
